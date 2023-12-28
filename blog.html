@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html>
+
+   <head>
+
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+      <title> Udbhata - Solution </title>
+
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link rel="icon" href="assets/img/favicon.png" sizes="16x16" type="image/png">
+
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <script src="header.js" type="text/javascript"></script>
+
+      <style type="text/css">
+
+         section
+
+         {
+
+            padding: 60px 0px
+
+         }
+
+      </style>
+
+   </head>
+
+   <body>
+
+      <!---header Start---->
+
+      <script>
+
+         printheader();
+
+      </script>
+
+      <section>
+
+         <div class="container">
+
+            <div class="row">
+
+               <div class="col-sm-12">
+
+                  <h1 class="text-center">Coming Soon</h1>
+
+               </div>
+
+            </div>
+
+         </div>
+
+      </section>
+
+       <section class="contact-us" id="about-contact">
+
+         <div class="container">
+
+            <h2 class="text-center">Contact </h2>
+
+            <div class="row contact-us-">
+
+               <div class="col-lg-2"></div>
+
+               <div class="col-sm-6 col-md-6 col-lg-4">
+
+                  <h4>Corporate Office</h4>
+
+                  <p class="corporate-office">91 Springboard, LVS Arcade, Plot #71, Jubilee Enclave,
+
+                     Hitech City, Madhapur, Hyderabad, Telangana 500081, India.
+
+                  </p>
+
+                  <p class="contact-us-phone">
+
+                     Tel : +91 7702777404
+
+                  </p>
+
+                  <p class="contact-us-email">info@udbhata.com</p>
+
+                  <!-- <p class="contact-us-icon">
+
+                     <i class="fa fa-linkedin"></i>
+
+                     <i class="fa fa-twitter"></i>
+
+                  </p> -->
+
+               </div>
+
+                <div class="col-sm-6 col-md-6 col-lg-4">
+
+                  <h4 class="call-back"><small>Fill in the form to</small><br>Seek a 30 min discovery call</h4>
+
+                 <form class="footer-form leadform contact-us-form submit-contact-us" name="form_contact_us" id="leadform" method="post" enctype="multipart/form-data" action="leadgrab.php">
+                     <div class="row row-footer-form">
+                        <div class="col-sm-6">
+                     <div class="form-group form_name">
+                        <input type="text" name="fname" id="fname" class="first_name" placeholder="First Name*" value="" required="required">
+                     </div>
+                  </div>
+                  <div class="col-sm-6">
+                     <div class="form-group form_name">
+                        <input type="text" name="lname" id="lname" placeholder="Last Name*" class="last_name" value="" required="required">
+                     </div>
+                  </div>
+                  </div>
+                     <div class="form-group">
+                        <input type="email" name="email" id="email_id" placeholder="Email*" class="email_id" value="" required="required">
+                     </div>
+                     <div class="form-group">
+                        <input type="tel" name="phone" id="phone_number" placeholder="Phone number *" value="" class="phone_number" required="required" maxlength=10 minlength=10>
+                     </div>
+                     <button type="submit" id="btn_contact_Submit" class="ajaxFormButton formSubmit">Reach us</button>
+                     <input type="hidden" id="leadutmsource" name="leadutmsource" value="" />
+                     <input type="hidden" id="leadutmcampaign" name="leadutmcampaign" value=""/>
+                     <input type="hidden" id="leadutmmedium" name="leadutmmedium" value="" />
+                     <input type="hidden" id="leadutmterm" name="leadutmterm" value="" />
+                  </form>
+
+               </div>
+
+               <div class="col-lg-2"></div>
+
+            </div>
+
+         </div>
+
+      </section>
+
+      <footer>
+
+         <div class="container">
+
+            <div class="row">
+
+               <div class="col-sm-12">
+
+                  <p class="text-center">&copy; 2023 - All rights reserved to Udbhata Technologies Pvt Ltd.</p>
+
+               </div>
+
+            </div>
+
+         </div>
+
+      </footer>
+
+      <script type="text/javascript">
+
+         $(document).ready(function(){
+
+           if($(window).width() <= 577){
+
+          $('.inner-link').click(function()
+
+         {
+
+               $('.menu').css("opacity",0);
+
+                $('.fa-bars').click(function()
+
+         {
+
+         
+
+         $(".menu").css("opacity",1);
+
+         });
+
+             
+
+         });
+
+         }
+
+         
+
+          $(function(){
+
+         
+
+         var url = window.location.pathname, 
+
+         urlRegExp = new RegExp(url.replace(/\/$/,'') + "$"); // create regexp to match current url pathname and remove trailing slash if present as it could collide with the link in navigation in case trailing slash wasn't present there
+
+         // now grab every link from the navigation
+
+         console.log(urlRegExp)
+
+         $('.menu a').each(function(){
+
+            // and test its normalized href against the url pathname regexp
+
+            if(urlRegExp.test(this.href.replace(/\/$/,''))){
+
+                $(this).addClass('active');
+
+            }
+
+         });
+
+         
+
+         });
+
+         });
+
+      </script>
+
+      <script>
+
+         window.onscroll = function() {myFunction()};
+
+         
+
+         var header = document.getElementById("Header");
+
+         var sticky = header.offsetTop;
+
+         
+
+         function myFunction() {
+
+           if (window.pageYOffset > sticky) {
+
+             header.classList.add("sticky");
+
+           } else {
+
+             header.classList.remove("sticky");
+
+           }
+
+         }
+
+      </script>
+
+           <script src="assets/js/jquery-1.9.1.min.js"></script> 
+
+      <script src="https://cdn.jsdelivr.net/jquery.validation/1.13.1/jquery.validate.min.js"></script>
+
+      <script src="https://cdn.jsdelivr.net/jquery.validation/1.13.1/additional-methods.min.js"></script>
+
+      <script>
+
+
+         
+      
+
+         
+
+         
+
+         $("#leadutmsource").val(getCookie("_inacreslp_utm_source"));
+
+         $("#leadutmcampaign").val(getCookie("_inacreslp_utm_campaign"));
+
+         $("#leadutmmedium").val(getCookie("_inacreslp_utm_medium"));
+
+         $("#leadutmterm").val(getCookie("_inacreslp_utm_term"));
+
+         
+
+         
+
+      </script>     
+
+
+       <script src="https://cdn.jsdelivr.net/jquery.validation/1.13.1/jquery.validate.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/jquery.validation/1.13.1/additional-methods.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.6/dist/loadingoverlay.min.js"></script>
+
+     <script type="text/javascript">
+   $('.submit-contact-us').click(function(){ 
+   $(".contact-us-form").validate({
+   rules: {
+   fname_2: {           
+   required: true,   
+
+   },
+   lname_2: {              
+   required: true,  
+
+   },
+   email_id_2: {           
+   required: true,   
+
+   },
+   phone_number_2: {           
+   required: true,
+
+   }
+   },
+   messages: {              
+
+   },
+   submitHandler: function (form) {
+      $.LoadingOverlay("show");
+      $('#btn_pop_Submit').attr('disabled', true);
+      $("form[name='form_contact_us']").submit();           
+   }
+   }); 
+   $.LoadingOverlay("hide");
+   });
+</script>
+
+   </body>
+
+</html>
